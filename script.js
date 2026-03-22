@@ -1,8 +1,7 @@
 // Menggunakan 'let' agar isi pesan bisa diubah oleh fungsi saveName
-let message = `Hai Levina...\nAku cuma mau bilang, selamat menempuh perjalanan baru di tempat PKL nanti ya. Aku tahu mungkin ada rasa deg-degan atau capek ke depannya, tapi aku yakin banget kamu bisa ngelewatin semuanya dengan hebat.\n\nJangan lupa jaga kesehatan, jangan terlalu diforsir, dan tetap jadi Levina yang selalu semangat.\n\nSemangat ya buat dunianya, dan semangat juga buat harimu!\n\nI'm always rooting for you.`;
+let message = `Hai Levina...\nmaaf lancang menyapa di sela 24 jam berhargamu.\n\nSelamat merajut langkah di tempat PKL nanti, ya. Aku paham ada debar dan lelah yang mungkin membayang, namun aku percaya ketangguhanmu akan melampaui segalanya dengan gemilang.\n\nJangan lupa dekap kesehatanmu, jangan biarkan raga terlalu terforsir, dan tetaplah menjadi Levina yang binar semangatnya tak pernah pudar.\n\nSemangat untuk duniamu, dan semoga harimu selalu berpihak padamu!`;
 
-let message2 = 'Oh iya..\n\nIni sebagai balasan karna kamu menyemangati aku PKL waktu itu dan tidak hanya satu momen itu saja, masih banyak lainnya.\n\nNikmati juga rasa capek ketika PKL nanti, semoga lelahmu menjadi lillah, dan setiap usahamu berbuah barokah.\n\ntutup mata ketika malam tiba, buka mata ketika matahari menyapa. karna dunia kerja butuh kamu yang segar, bukan kelopak mata yang lebar\n';
-
+let message2 = 'Oh iya..\n\nAnggap saja ini sekadar balasan kecil karena kamu pernah menjadi pelita penyemangat saat aku PKL kala itu. Mungkin terlihat sederhana, namun cukup untuk memantik upayaku. Dan ya, masih banyak memori lainnya.\n\nRayakanlah setiap peluh saat PKL nanti semoga lelahmu bermuara lillah, dan tiap ikhtiarmu berbuah barokah.\n\nPejamkan netra kala malam merapat, sambutlah mentari dengan hangat. Karena dunia butuh binar jiwamu yang segar, bukan sekadar kelopak mata yang dipaksa lebar.\n\nTak perlu kau anggap serius pesan ini, jatuh ke dalam jangkauan pandangmu saja bagiku sudah lebih dari cukup.\n\nHAHAHA';
 // --- FITUR NO 3: SIMPAN NAMA ---
 function saveName() {
     const input = document.getElementById('userName');
@@ -48,6 +47,28 @@ function setTheme(themeName) {
   localStorage.setItem('user-theme', themeName);
 }
 
+// --- FITUR TAMBAHAN: GANTI LAGU & TEMA OTOMATIS ---
+function changeMusic(fileName) {
+    const bgMusic = document.getElementById("bgMusic");
+    const volSymbol = document.getElementById("volSymbol");
+    
+    bgMusic.src = fileName;
+    
+    // Logika ganti tema otomatis berdasarkan lagu
+    if (fileName === "about-you.mp3") {
+        setTheme('midnight');
+    } else if (fileName === "sal-priadi.mp3") {
+        setTheme('parchment');
+    } else if (fileName === "payung-teduh.mp3") {
+        setTheme('rose');
+    }
+
+    bgMusic.play().then(() => {
+        bgMusic.muted = false;
+        if (volSymbol) volSymbol.innerText = "🔊";
+    }).catch(err => console.log("Interaksi diperlukan untuk memutar musik"));
+}
+ 
 // --- ENVELOPE LOGIC ---
 function openEnvelope() {
   const wrapper = document.getElementById('envelopeWrapper');
@@ -76,7 +97,7 @@ function showLetter() {
   letterBox.style.display = "block";
 
   bgMusic.volume = 0;
-  bgMusic.play().catch(() => console.log("Audio play blocked"));
+  bgMusic.play().catch(() => console.log("Audio play blocked by browser"));
   
   let vol = 0;
   const fadeIn = setInterval(() => {
@@ -167,7 +188,7 @@ function readSecondLetter() {
 function addFloatingSticker() {
   const element = document.getElementById("typedText");
   const sticker = document.createElement("div");
-  sticker.innerHTML = "✨💖✨😜";
+  sticker.innerHTML = "✨✨😜";
   sticker.style.cssText = "margin-top:20px; font-size:1.5rem; opacity:0; transition:opacity 2s ease; text-align:right;";
   element.appendChild(sticker);
   
@@ -213,7 +234,6 @@ document.addEventListener("DOMContentLoaded", () => {
             event.preventDefault();
             const data = new FormData(event.target);
             
-            // Mengubah teks tombol saat loading
             const btn = event.target.querySelector("button");
             const originalBtnText = btn.innerText;
             btn.innerText = "Mengirim...";
@@ -231,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 } else {
                     btn.innerText = originalBtnText;
                     btn.disabled = false;
-                    alert("Gagal terkirim. Pastikan FORM_ID sudah benar.");
+                    alert("Oops! Ada kendala saat mengirim pesan.");
                 }
             }).catch(error => {
                 btn.innerText = originalBtnText;
