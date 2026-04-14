@@ -1,30 +1,62 @@
 /* --- ROOT VARIABLES --- */
 :root {
-  --bg-color: #1e1e2f;
-  --text-color: #ffffff;
-  --accent-color: #ffb3c7;
+  --bg-color: #0a0e27;
+  --text-color: #e3f2fd;
+  --accent-color: #ff4081;
   --paper-bg: #fdf6e3;
-  --paper-line: #d2d2d2;
-  --paper-text: #333;
-  --cursor-img: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23ffb3c7" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>'), auto;
+  --paper-line: #e3b3d5;
+  --paper-text: #2c2c2c;
+  --cursor-img: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><line x1="16" y1="4" x2="16" y2="12" stroke="%23ff69b4" stroke-width="2"/><line x1="16" y1="20" x2="16" y2="28" stroke="%23ff69b4" stroke-width="2"/><line x1="4" y1="16" x2="12" y2="16" stroke="%23ff69b4" stroke-width="2"/><line x1="20" y1="16" x2="28" y2="16" stroke="%23ff69b4" stroke-width="2"/><circle cx="16" cy="16" r="2" fill="%2300bfff"/></svg>') 16 16, auto;
 }
 
 [data-theme="rose"] {
-  --bg-color: #ffe4e1;
-  --text-color: #5d4037;
-  --accent-color: #ff8fa3;
-  --paper-bg: #fff0f5;
-  --paper-line: #ffc1cc;
-  --paper-text: #4a4a4a;
+  --bg-color: #faa5b8;
+  --text-color: #5d1d3b;
+  --accent-color: #ff1744;
+  --paper-bg: #fff5f8;
+  --paper-line: #ff69b4;
+  --paper-text: #3d1d2d;
+  --cursor-img: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><line x1="16" y1="4" x2="16" y2="12" stroke="%23ff1744" stroke-width="2"/><line x1="16" y1="20" x2="16" y2="28" stroke="%23ff1744" stroke-width="2"/><line x1="4" y1="16" x2="12" y2="16" stroke="%23ff1744" stroke-width="2"/><line x1="20" y1="16" x2="28" y2="16" stroke="%23ff1744" stroke-width="2"/><circle cx="16" cy="16" r="2" fill="%23ffc0cb"/></svg>') 16 16, auto;
 }
 
 [data-theme="parchment"] {
-  --bg-color: #f4ece1;
-  --text-color: #4e342e;
-  --accent-color: #8d6e63;
-  --paper-bg: #fdf5e6;
-  --paper-line: #e0d5c1;
-  --paper-text: #2d2d2d;
+  --bg-color: #f5deb3;
+  --text-color: #3d2817;
+  --accent-color: #d4a574;
+  --paper-bg: #fffaf0;
+  --paper-line: #d2b48c;
+  --paper-text: #2d1810;
+  --cursor-img: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><line x1="16" y1="4" x2="16" y2="12" stroke="%238b4513" stroke-width="2"/><line x1="16" y1="20" x2="16" y2="28" stroke="%238b4513" stroke-width="2"/><line x1="4" y1="16" x2="12" y2="16" stroke="%238b4513" stroke-width="2"/><line x1="20" y1="16" x2="28" y2="16" stroke="%238b4513" stroke-width="2"/><circle cx="16" cy="16" r="2" fill="%23daa520"/></svg>') 16 16, auto;
+}
+
+[data-theme="sunset"] {
+  --bg-color: #2d1b3d;
+  --text-color: #ffe8d3;
+  --accent-color: #ff6b35;
+  --paper-bg: #fff8f1;
+  --paper-line: #ffb284;
+  --paper-text: #663322;
+  --cursor-img: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><line x1="16" y1="4" x2="16" y2="12" stroke="%23ff6b35" stroke-width="2"/><line x1="16" y1="20" x2="16" y2="28" stroke="%23ff6b35" stroke-width="2"/><line x1="4" y1="16" x2="12" y2="16" stroke="%23ff6b35" stroke-width="2"/><line x1="20" y1="16" x2="28" y2="16" stroke="%23ff6b35" stroke-width="2"/><circle cx="16" cy="16" r="2" fill="%23ffa500"/></svg>') 16 16, auto;
+}
+
+[data-theme="forest"] {
+  --bg-color: #0d2818;
+  --text-color: #b8f3d8;
+  --accent-color: #4caf50;
+  --paper-bg: #f0fdf4;
+  --paper-line: #81c784;
+  --paper-text: #1b4620;
+  --cursor-img: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><line x1="16" y1="4" x2="16" y2="12" stroke="%234caf50" stroke-width="2"/><line x1="16" y1="20" x2="16" y2="28" stroke="%234caf50" stroke-width="2"/><line x1="4" y1="16" x2="12" y2="16" stroke="%234caf50" stroke-width="2"/><line x1="20" y1="16" x2="28" y2="16" stroke="%234caf50" stroke-width="2"/><circle cx="16" cy="16" r="2" fill="%2376ff03"/></svg>') 16 16, auto;
+}
+
+[data-theme="ocean"] {
+  --bg-color: #051c2e;
+  --text-color: #b3e5fc;
+  --accent-color: #00acc1;
+  --paper-bg: #e0f7fa;
+  --paper-line: #80deea;
+  --paper-text: #00546b;
+  --cursor-img: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><line x1="16" y1="4" x2="16" y2="12" stroke="%2300acc1" stroke-width="2"/><line x1="16" y1="20" x2="16" y2="28" stroke="%2300acc1" stroke-width="2"/><line x1="4" y1="16" x2="12" y2="16" stroke="%2300acc1" stroke-width="2"/><line x1="20" y1="16" x2="28" y2="16" stroke="%2300acc1" stroke-width="2"/><circle cx="16" cy="16" r="2" fill="%2300e5ff"/></svg>') 16 16, auto;
 }
 
 /* --- RESET & BASE --- */
@@ -233,18 +265,50 @@ body {
   100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
 }
 
+/* --- CONTAINER --- */
+.container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
 /* --- MOBILE --- */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   body { 
-    padding-top: 140px; /* Tambah ruang biar gak mepet menu tema */
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-top: 130px;
+    padding-bottom: 90px;
+    padding-left: 0;
+    padding-right: 0;
   }
   
   .theme-menu { 
-    width: 95%; 
-    scale: 0.85; 
-    top: 10px; 
+    width: 98%;
+    max-width: 100%;
+    top: 8px;
+    padding: 10px 8px;
+    gap: 6px;
+  }
+
+  .theme-menu button, .theme-menu select {
+    padding: 7px 10px;
+    font-size: 10px;
+    min-width: auto;
+  }
+
+  .intro {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    padding: 0 15px;
   }
 
   /* Memastikan pembungkus amplop bener-bener di tengah */
@@ -253,39 +317,134 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
+    padding: 0 10px;
   }
 
   .envelope { 
-    width: 260px; 
-    height: 160px; 
+    width: 240px; 
+    height: 150px;
   }
 
   .flap { 
-    border-left-width: 130px; 
-    border-right-width: 130px; 
-    border-top-width: 90px; 
+    border-left-width: 120px; 
+    border-right-width: 120px; 
+    border-top-width: 85px; 
   }
 
   /* Logika tulisan di bawah amplop biar center */
   .tap-instruction {
     width: 100%;
     text-align: center;
-    margin-top: 20px;
-    font-size: 0.85rem;
+    margin-top: 15px;
+    font-size: 0.8rem;
   }
 
   .letter { 
-    padding: 40px 15px 50px 45px; 
-    font-size: 0.85rem; 
-    line-height: 24px; /* Sedikit lebih rapat biar muat banyak teks di HP */
-    min-height: 350px;
+    padding: 30px 15px 40px 40px; 
+    font-size: 0.8rem; 
+    line-height: 22px;
+    min-height: 300px;
+    margin: 0 10px;
+    max-width: calc(100% - 20px);
+  }
+
+  .signature {
+    width: 100px;
+  }
+
+  #replySection {
+    margin-top: 20px;
+    padding-top: 15px;
+  }
+
+  #replySection textarea {
+    font-size: 0.9rem;
+    height: 70px;
+  }
+
+  .volume-icon {
+    width: 40px;
+    height: 40px;
+    bottom: 70px;
+    left: 15px;
+    font-size: 18px;
   }
 
   .next-btn-fixed {
-    padding: 10px 20px;
-    font-size: 0.8rem;
+    padding: 10px 18px;
+    font-size: 0.75rem;
     bottom: 15px;
     right: 15px;
+    left: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+
+  .theme-menu {
+    top: 6px;
+    padding: 8px 6px;
+    gap: 5px;
+  }
+
+  .theme-menu button, .theme-menu select {
+    padding: 6px 8px;
+    font-size: 9px;
+    white-space: nowrap;
+  }
+
+  .intro {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  .envelope-wrapper {
+    margin-top: 15px;
+    padding: 0 5px;
+  }
+
+  .envelope {
+    width: 200px;
+    height: 130px;
+  }
+
+  .flap {
+    border-left-width: 100px;
+    border-right-width: 100px;
+    border-top-width: 75px;
+  }
+
+  .letter {
+    padding: 25px 12px 35px 35px;
+    font-size: 0.75rem;
+    line-height: 20px;
+    min-height: 250px;
+    margin: 0 5px;
+    max-width: calc(100% - 10px);
+  }
+
+  .signature {
+    width: 80px;
+    margin: 20px 0 0 auto;
+  }
+
+  .volume-icon {
+    width: 38px;
+    height: 38px;
+    bottom: 65px;
+    left: 12px;
+    font-size: 16px;
+  }
+
+  .next-btn-fixed {
+    padding: 8px 15px;
+    font-size: 0.7rem;
+    bottom: 12px;
+    right: 12px;
   }
 }

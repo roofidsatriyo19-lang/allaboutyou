@@ -12,16 +12,22 @@
         <p>Menyiapkan surat...</p>
     </div>
 
-    <div id="nameInputSection" style="position: fixed; inset: 0; background: var(--bg-color); z-index: 2000; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: 0.5s;">
-        <p style="color: var(--text-color); margin-bottom: 15px; font-family: 'Georgia', serif;">Masukkan namamu dulu ya:</p>
-        <div style="display: flex; gap: 10px;">
+    <div id="nameInputSection" style="position: fixed; inset: 0; background: var(--bg-color); z-index: 2000; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: 0.5s; padding: 20px;">
+        <p style="color: var(--text-color); margin-bottom: 20px; font-family: 'Georgia', serif; font-size: 1.1rem; text-align: center;">Masukkan namamu dulu ya:</p>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; width: 100%; max-width: 400px;">
             <input type="text" id="userName" placeholder="Nama kamu..." 
-                style="padding: 12px 20px; border-radius: 25px; border: 2px solid var(--accent-color); outline: none; text-align: center; font-family: inherit;">
-            <button onclick="saveName()" style="padding: 10px 25px; border-radius: 25px; background: var(--accent-color); color: white; border: none; cursor: pointer; font-weight: bold; transition: 0.3s;">Lanjut</button>
+                style="padding: 12px 20px; border-radius: 25px; border: 2px solid var(--accent-color); outline: none; text-align: center; font-family: inherit; min-width: 150px; flex: 1;">
+            <button onclick="saveName()" style="padding: 10px 25px; border-radius: 25px; background: var(--accent-color); color: white; border: none; cursor: pointer; font-weight: bold; transition: 0.3s; white-space: nowrap;">Lanjut</button>
         </div>
     </div>
 
     <div class="theme-menu">
+        <button onclick="setTheme('midnight')">🌙 Midnight</button>
+        <button onclick="setTheme('rose')">🌸 Rose</button>
+        <button onclick="setTheme('sunset')">🌅 Sunset</button>
+        <button onclick="setTheme('forest')">🌲 Forest</button>
+        <button onclick="setTheme('ocean')">🌊 Ocean</button>
+        <button onclick="setTheme('parchment')">📜 Parchment</button>
         
         <select id="musicSelect" onchange="changeMusic(this.value)" style="padding: 5px 10px; border-radius: 20px; border: none; background: var(--accent-color); color: white; font-size: 11px; cursor: pointer; outline: none; font-family: 'Courier New', monospace;">
             <option value="about-you.mp3">🎵 The 1975</option>
@@ -52,8 +58,8 @@
                 <p style="font-style: italic; font-size: 0.9rem; color: var(--paper-text);">Sudah baca?, Mau kirim balasan singkat?</p>
                 <form id="replyForm" action="https://formspree.io/f/xpqjlyrv" method="POST">
                     <textarea name="message" placeholder="Tulis pesanmu disini.." required 
-                        style="width: 100%; height: 80px; padding: 10px; border-radius: 10px; border: 1px solid var(--paper-line); font-family: inherit; background: rgba(255,255,255,0.5); margin-top: 10px;"></textarea>
-                    <button type="submit" style="margin-top: 10px; padding: 8px 20px; background: var(--accent-color); color: white; border: none; border-radius: 20px; cursor: pointer; font-weight: bold; width: 100%;">Kirim Balasan</button>
+                        style="width: 100%; height: 80px; padding: 10px; border-radius: 10px; border: 1px solid var(--paper-line); font-family: inherit; background: rgba(255,255,255,0.5); margin-top: 10px; box-sizing: border-box; resize: vertical;"></textarea>
+                    <button type="submit" style="margin-top: 10px; padding: 8px 20px; background: var(--accent-color); color: white; border: none; border-radius: 20px; cursor: pointer; font-weight: bold; width: 100%; font-size: 1rem;">Kirim Balasan</button>
                 </form>
                 <p id="thankYouNote" style="display:none; color: #2ecc71; font-weight: bold; margin-top: 10px; text-align: center;">Pesanmu sudah terkirim ke dia! ✨</p>
             </div>
