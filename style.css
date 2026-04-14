@@ -386,16 +386,39 @@ body {
     padding-bottom: 100px;
   }
 
+  /* --- MENU TEMA & LAGU (MODIFIED) --- */
   .theme-menu {
-    top: 6px;
-    padding: 8px 6px;
-    gap: 5px;
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap; /* Agar otomatis turun jika layar sempit */
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.3); /* Sedikit lebih gelap agar kontras */
+    padding: 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Dukungan Safari iPhone */
+    width: 95%;
+    max-width: 420px;
   }
 
-  .theme-menu button, .theme-menu select {
-    padding: 6px 8px;
-    font-size: 9px;
+  .theme-menu button, 
+  .theme-menu select {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Courier New', monospace;
+    font-size: 10px; /* Ukuran font lebih aman untuk mobile */
+    background: var(--accent-color);
+    color: white;
     white-space: nowrap;
+    flex-grow: 1; /* Agar tombol mengisi ruang yang kosong */
+    max-width: fit-content;
   }
 
   .intro {
