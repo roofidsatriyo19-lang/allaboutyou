@@ -585,14 +585,14 @@ body {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  padding: 14px 28px;
+  padding: 16px 32px;
   background: linear-gradient(135deg, var(--accent-color), var(--secondary));
   color: white;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   box-shadow: 0 10px 30px var(--shadow);
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   z-index: 100;
@@ -614,7 +614,7 @@ body {
 }
 
 .next-btn-fixed:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.05);
   box-shadow: 0 15px 40px var(--shadow);
 }
 
@@ -697,157 +697,607 @@ body {
 }
 
 /* ==================== RESPONSIVE DESIGN ==================== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .container {
-    margin: 150px auto 40px;
-    padding: 15px;
+    margin: 120px auto 40px;
+    padding: 20px;
   }
 
   .intro {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    font-size: 1.75rem;
   }
 
   .letter {
-    padding: 30px 25px;
-    font-size: 1rem;
-    border-radius: 8px;
+    padding: 35px 30px;
   }
 
   .theme-menu {
-    gap: 5px;
-    padding: 12px;
+    gap: 8px;
+    padding: 15px;
+  }
+
+  .theme-menu button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .theme-menu select {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    margin: 140px auto 30px;
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .intro {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    padding: 0 10px;
+  }
+
+  .letter {
+    padding: 25px 20px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    line-height: 1.7;
+  }
+
+  .letter #typedText {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .signature {
+    max-width: 120px;
+    margin-top: 20px;
+  }
+
+  .theme-menu {
+    gap: 6px;
+    padding: 10px 8px;
+    top: 0;
+    flex-wrap: wrap;
   }
 
   .theme-menu button {
     padding: 6px 10px;
+    font-size: 0.7rem;
+    flex: 1 1 calc(50% - 3px);
+    min-width: 80px;
+  }
+
+  .theme-menu select {
+    flex: 1 1 calc(50% - 3px);
+    min-width: 80px;
+    font-size: 0.7rem;
+    padding: 6px 8px;
+  }
+
+  .button-wrapper {
+    margin: 30px 0;
+  }
+
+  .button-wrapper::before {
+    max-width: 240px;
+    height: 150px;
+  }
+
+  .button-wrapper::after {
+    max-width: 240px;
+    height: 150px;
+    line-height: 150px;
+    margin: -150px auto 0;
+    font-size: 3rem;
+  }
+
+  .tap-instruction {
+    max-width: 240px;
+    height: 150px;
+    line-height: 30px;
+    font-size: 0.95rem;
+  }
+
+  .next-btn-fixed,
+  .volume-icon {
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .next-btn-fixed {
+    right: 15px;
+    padding: 10px 12px;
     font-size: 0.75rem;
+    border-radius: 40px;
+  }
+
+  .volume-icon {
+    left: 15px;
+    font-size: 1.2rem;
+  }
+
+  #replySection textarea {
+    font-size: 0.9rem;
+    height: 100px;
+    padding: 12px;
+  }
+
+  #replySection button {
+    font-size: 0.9rem;
+    padding: 12px 16px;
+  }
+
+  #nameInputSection {
+    padding: 20px 15px !important;
+  }
+
+  #nameInputSection p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+
+  #userName {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  #nameInputSection button {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    margin: 130px auto 25px;
+    padding: 12px;
+  }
+
+  .intro {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+  }
+
+  .letter {
+    padding: 20px 16px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+
+  .letter #typedText {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .signature {
+    max-width: 100px;
+    margin-top: 15px;
+  }
+
+  .theme-menu {
+    gap: 5px;
+    padding: 8px 6px;
+  }
+
+  .theme-menu button {
+    padding: 5px 8px;
+    font-size: 0.65rem;
+    flex: 1 1 auto;
+    min-width: 70px;
+  }
+
+  .theme-menu select {
+    padding: 5px 6px;
+    font-size: 0.65rem;
+    flex: 1 1 auto;
+    min-width: 70px;
+  }
+
+  .button-wrapper {
+    margin: 25px auto;
+  }
+
+  .button-wrapper::before {
+    max-width: 200px;
+    height: 130px;
+  }
+
+  .button-wrapper::after {
+    max-width: 200px;
+    height: 130px;
+    line-height: 130px;
+    margin: -130px auto 0;
+    font-size: 2.5rem;
+  }
+
+  .tap-instruction {
+    max-width: 200px;
+    height: 130px;
+    line-height: 26px;
+    font-size: 0.85rem;
   }
 
   .next-btn-fixed,
   .volume-icon {
     bottom: 20px;
-    width: 45px;
-    height: 45px;
+    width: auto;
+    height: auto;
+    min-width: 50px;
+    min-height: 50px;
   }
 
   .next-btn-fixed {
     right: 20px;
-    padding: 10px 15px;
-    font-size: 0.85rem;
+    padding: 14px 20px;
+    font-size: 0.8rem;
   }
 
   .volume-icon {
     left: 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
-  .button-wrapper::before {
-    max-width: 250px;
-    height: 160px;
+  #replySection {
+    padding-top: 15px;
   }
 
-  .button-wrapper::after {
-    max-width: 250px;
-    height: 160px;
-    line-height: 160px;
-    margin: -160px auto 0;
-    font-size: 3rem;
+  #replySection p {
+    font-size: 0.85rem;
   }
 
-  .tap-instruction {
-    max-width: 250px;
-    height: 160px;
-    line-height: 32px;
-  }
-
-  #typedText {
-    font-size: 0.95rem;
-    line-height: 1.7;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    margin: 130px auto 30px;
-  }
-
-  .intro {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-  }
-
-  .letter {
-    padding: 20px 18px;
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .theme-menu {
-    gap: 4px;
+  #replySection textarea {
+    font-size: 0.85rem;
+    height: 80px;
     padding: 10px;
   }
 
-  .theme-menu button {
-    padding: 5px 8px;
-    font-size: 0.7rem;
-  }
-
-  .button-wrapper::before {
-    max-width: 220px;
-    height: 140px;
-  }
-
-  .button-wrapper::after {
-    max-width: 220px;
-    height: 140px;
-    line-height: 140px;
-    margin: -140px auto 0;
-    font-size: 2.5rem;
-  }
-
-  .tap-instruction {
-    max-width: 220px;
-    height: 140px;
-    line-height: 28px;
-    font-size: 1rem;
-  }
-
-  .next-btn-fixed {
-    padding: 8px 12px;
-    font-size: 0.75rem;
-    bottom: 15px;
-    right: 15px;
-  }
-
-  .volume-icon {
-    bottom: 15px;
-    left: 15px;
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
+  #replySection button {
+    font-size: 0.85rem;
+    padding: 10px 14px;
   }
 
   #nameInputSection {
-    padding: 15px !important;
+    padding: 15px 12px !important;
   }
 
   #nameInputSection p {
-    font-size: 1rem;
-    margin-bottom: 15px;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
   }
 
   #nameInputSection div {
-    flex-direction: column;
+    flex-direction: column !important;
+    gap: 10px;
   }
 
   #userName {
+    font-size: 0.85rem;
+    padding: 10px;
     width: 100%;
-    min-width: unset;
+    min-width: unset !important;
+    flex: none !important;
   }
 
   #nameInputSection button {
     width: 100%;
+    font-size: 0.85rem;
+    padding: 10px 12px;
+  }
+}
+
+/* ==================== VIDEO SECTION ==================== */
+#videoSection {
+  animation: slideDown 0.6s ease-out;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#videoSection video {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px var(--shadow);
+  border: 2px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+#videoSection video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 35px var(--shadow);
+}
+
+#videoSection p {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--paper-text);
+  margin-bottom: 15px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@media (max-width: 768px) {
+  #videoSection video {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    margin: 120px auto 20px;
+    padding: 10px;
+  }
+
+  .intro {
+    font-size: 1rem;
+    margin-bottom: 18px;
+    letter-spacing: 0px;
+  }
+
+  .letter {
+    padding: 18px 14px;
+    font-size: 0.85rem;
+  }
+
+  .letter #typedText {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .signature {
+    max-width: 80px;
+    margin-top: 12px;
+  }
+
+  .theme-menu {
+    gap: 4px;
+    padding: 6px 4px;
+    max-height: auto;
+    overflow-y: auto;
+  }
+
+  .theme-menu button {
+    padding: 4px 6px;
+    font-size: 0.6rem;
+    flex: 1 1 auto;
+    min-width: 60px;
+  }
+
+  .theme-menu select {
+    padding: 4px 4px;
+    font-size: 0.6rem;
+    flex: 1 1 auto;
+    min-width: 60px;
+  }
+
+  .button-wrapper {
+    margin: 20px auto;
+  }
+
+  .button-wrapper::before {
+    max-width: 180px;
+    height: 120px;
+  }
+
+  .button-wrapper::after {
+    max-width: 180px;
+    height: 120px;
+    line-height: 120px;
+    margin: -120px auto 0;
+    font-size: 2.2rem;
+  }
+
+  .tap-instruction {
+    max-width: 180px;
+    height: 120px;
+    line-height: 24px;
+    font-size: 0.8rem;
+  }
+
+  .next-btn-fixed,
+  .volume-icon {
+    bottom: 15px;
+    width: auto;
+    height: auto;
+    min-width: 45px;
+    min-height: 45px;
+  }
+
+  .next-btn-fixed {
+    right: 15px;
+    padding: 10px 12px;
+    font-size: 0.7rem;
+  }
+
+  .volume-icon {
+    left: 15px;
+    font-size: 0.9rem;
+  }
+
+  #replySection {
+    padding-top: 12px;
+    margin-top: 15px;
+  }
+
+  #replySection p {
+    font-size: 0.8rem;
+  }
+
+  #replySection textarea {
+    font-size: 0.8rem;
+    height: 70px;
+    padding: 8px;
+  }
+
+  #replySection button {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  #nameInputSection {
+    padding: 12px 10px !important;
+  }
+
+  #nameInputSection p {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  #nameInputSection div {
+    flex-direction: column !important;
+    gap: 8px;
+  }
+
+  #userName {
+    font-size: 0.8rem;
+    padding: 8px;
+    width: 100%;
+    min-width: unset !important;
+  }
+
+  #nameInputSection button {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: 13px;
+  }
+
+  .container {
+    margin: 110px auto 15px;
+    padding: 8px;
+  }
+
+  .intro {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  .letter {
+    padding: 15px 12px;
+    font-size: 0.8rem;
+  }
+
+  .letter #typedText {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .signature {
+    max-width: 70px;
+  }
+
+  .theme-menu {
+    gap: 3px;
+    padding: 5px 3px;
+  }
+
+  .theme-menu button {
+    padding: 3px 5px;
+    font-size: 0.55rem;
+    min-width: 50px;
+  }
+
+  .theme-menu select {
+    padding: 3px 3px;
+    font-size: 0.55rem;
+    min-width: 50px;
+  }
+
+  .button-wrapper::before {
+    max-width: 160px;
+    height: 100px;
+  }
+
+  .button-wrapper::after {
+    max-width: 160px;
+    height: 100px;
+    line-height: 100px;
+    margin: -100px auto 0;
+    font-size: 2rem;
+  }
+
+  .tap-instruction {
+    max-width: 160px;
+    height: 100px;
+    line-height: 20px;
+    font-size: 0.75rem;
+  }
+
+  .next-btn-fixed,
+  .volume-icon {
+    bottom: 12px;
+    width: auto;
+    height: auto;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .next-btn-fixed {
+    right: 12px;
+    padding: 8px 10px;
+    font-size: 0.65rem;
+  }
+
+  .volume-icon {
+    left: 12px;
+    font-size: 0.8rem;
+  }
+
+  #replySection textarea {
+    font-size: 0.75rem;
+    height: 60px;
+    padding: 6px;
+  }
+
+  #replySection button {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  #nameInputSection {
+    padding: 10px 8px !important;
+  }
+
+  #nameInputSection p {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  #nameInputSection div {
+    gap: 6px;
+  }
+
+  #userName {
+    font-size: 0.75rem;
+    padding: 6px;
+  }
+
+  #nameInputSection button {
+    font-size: 0.75rem;
+    padding: 6px 8px;
   }
 }
 

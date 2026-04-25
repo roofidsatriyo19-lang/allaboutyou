@@ -248,6 +248,23 @@ document.addEventListener("DOMContentLoaded", () => {
                     statusNote.style.display = "block";
                     replyForm.style.display = "none";
                     scrollBottom();
+
+                    // Tampilkan video setelah 2 detik
+                    const videoSection = document.getElementById("videoSection");
+                    if (videoSection) {
+                        setTimeout(() => {
+                            videoSection.style.display = "block";
+                            scrollBottom();
+
+                            // Matikan musik saat video muncul
+                            const bgMusic = document.getElementById("bgMusic");
+                            if (bgMusic) {
+                                bgMusic.muted = true;
+                                const volSymbol = document.getElementById("volSymbol");
+                                if (volSymbol) volSymbol.innerText = "🔇"; // Update ikon volume ke mute
+                            }
+                        }, 2000);
+                    }
                 } else {
                     btn.innerText = originalBtnText;
                     btn.disabled = false;
@@ -261,3 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+function goToNewPage() {
+    window.location.href = 'page2.html';
+}
